@@ -14,17 +14,11 @@ public class ListConverter extends BaseConverter implements RopConverter<String,
 
 	@Override
 	public List convert(String source) {
-		if(StringUtils.isEmpty(source)){
+		if(StringUtils.isEmpty(source) || "[]".equals(source)){
 			return null;
 		}
-		List<Object> list = parseJson(source, new TypeReference<List<Object>>() { });
-		if(CollectionUtils.isEmpty(list)){
-			list = new ArrayList<Object>();
-			String[] ss = source.split(",");
-    		for (String string : ss) {
-				list.add(string);
-			}
-		}
+		List<Object> list = new ArrayList<Object>();
+		list.add(new Object());
     	return list;
 	}
 	

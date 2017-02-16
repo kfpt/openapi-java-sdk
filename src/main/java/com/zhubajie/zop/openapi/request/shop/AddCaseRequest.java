@@ -9,6 +9,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.zhubajie.zop.openapi.common.Rtf;
 import com.zhubajie.zop.openapi.request.common.UserAbstractRopRequest;
 
 public class AddCaseRequest extends UserAbstractRopRequest{
@@ -57,12 +58,8 @@ public class AddCaseRequest extends UserAbstractRopRequest{
      */
     @NotBlank
     @Length(min=1,max=2000)
+    @Rtf
     private String content;
-
-    /**
-     * 雇主评价
-     */
-    private String comment;
     
     /**
      * 封面文件URL
@@ -147,14 +144,6 @@ public class AddCaseRequest extends UserAbstractRopRequest{
 
 	public void setContent(String content) {
 		this.content = content;
-	}
-
-	public String getComment() {
-		return comment;
-	}
-
-	public void setComment(String comment) {
-		this.comment = comment;
 	}
 
 	public String getCoverFile() {

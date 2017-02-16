@@ -5,8 +5,10 @@ import java.util.List;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 
+import com.zhubajie.zop.openapi.common.Rtf;
 import com.zhubajie.zop.openapi.request.common.UserAbstractRopRequest;
 
 public class ServicesRequest extends UserAbstractRopRequest{
@@ -15,6 +17,7 @@ public class ServicesRequest extends UserAbstractRopRequest{
 	private Integer serviceId;
 	//服务标题
 	@NotBlank
+	@Length(min=1,max=50)
 	private String subject;
 	//PC价格
 	@Min(value=0)
@@ -26,15 +29,21 @@ public class ServicesRequest extends UserAbstractRopRequest{
 	private Float amountApp;
 	//单位
 	@NotBlank
+	@Length(min=1,max=32)
 	private String unit;
 	//封面图片
 	@NotBlank
+	@Length(min=1,max=200)
 	private String imgurl;
 	//服务内容
 	@NotBlank
+	@Rtf
+	@Length(min=1,max=4000)
 	private String cont;
 	//app服务内容
 	@NotBlank
+	@Rtf
+	@Length(min=1,max=4000)
 	private String contApp;
 	//三级基础类目(新)
 	@Min(value=0)

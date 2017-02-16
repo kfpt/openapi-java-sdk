@@ -6,12 +6,12 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	
-	<groupId>com.zhubajie.zop</groupId>
+	<groupId>com.zbj.zop</groupId>
     <artifactId>openapi-java-sdk</artifactId>
     <version>2.2.2</version>
     
     <packaging>jar</packaging>
-    <name>com.zhubajie.zop:openapi-java-sdk</name>
+    <name>com.zbj.zop:openapi-java-sdk</name>
 	<description>zop sdk</description>
 	<url>https://github.com/kfpt/openapi-java-sdk</url>
 	<developers>
@@ -43,8 +43,8 @@
 
 
     <dependencies>
-		<dependency>
-            <groupId>com.rop</groupId>
+        <dependency>
+            <groupId>com.zbj.zop</groupId>
             <artifactId>rop-client</artifactId>
             <version>1.0.4</version>
         </dependency>
