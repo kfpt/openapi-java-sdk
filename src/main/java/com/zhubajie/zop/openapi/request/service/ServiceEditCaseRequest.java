@@ -1,4 +1,4 @@
-package com.zhubajie.zop.openapi.request.shop;
+package com.zhubajie.zop.openapi.request.service;
 
 import java.util.List;
 
@@ -9,21 +9,16 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
 
-import com.zhubajie.zop.openapi.common.Rtf;
 import com.zhubajie.zop.openapi.request.common.UserAbstractRopRequest;
 
-public class AddCaseRequest extends UserAbstractRopRequest{
+public class ServiceEditCaseRequest extends UserAbstractRopRequest{
 
 	/**
-     * 案例ID（编辑案例传入）
-     */
-    private Integer caseId;
-
-    /**
-     * 任务ID
+     * 案例ID
      */
     @Min(1)
-    private Integer taskId;
+    @NotNull
+    private Integer caseId;
 
     /**
      * 案例标题
@@ -58,7 +53,6 @@ public class AddCaseRequest extends UserAbstractRopRequest{
      */
     @NotBlank
     @Length(min=1,max=2000)
-    @Rtf
     private String content;
     
     /**
@@ -89,22 +83,6 @@ public class AddCaseRequest extends UserAbstractRopRequest{
      */
     @NotEmpty
     private List<CaseFileInfo> caseFiles;
-
-	public Integer getCaseId() {
-		return caseId;
-	}
-
-	public void setCaseId(Integer caseId) {
-		this.caseId = caseId;
-	}
-
-	public Integer getTaskId() {
-		return taskId;
-	}
-
-	public void setTaskId(Integer taskId) {
-		this.taskId = taskId;
-	}
 
 	public String getTitle() {
 		return title;
@@ -184,6 +162,14 @@ public class AddCaseRequest extends UserAbstractRopRequest{
 
 	public void setAttrvalueIds(List<AttrValueIdInfo> attrvalueIds) {
 		this.attrvalueIds = attrvalueIds;
+	}
+
+	public Integer getCaseId() {
+		return caseId;
+	}
+
+	public void setCaseId(Integer caseId) {
+		this.caseId = caseId;
 	}
 
 }

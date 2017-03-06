@@ -1,4 +1,4 @@
-package com.zhubajie.zop.openapi.request.shop;
+package com.zhubajie.zop.openapi.request.service;
 
 public class AttrValueIdInfo {
 

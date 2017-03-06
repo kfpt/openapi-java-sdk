@@ -15,7 +15,7 @@ public class UserInfoResponse extends UserAbstractSuccessResponse{
     private String nickname;	// 昵称
     
     @XmlElement
-    private String userName;	// 用户名
+    private String username;	// 用户名
     
     @XmlElement
     private String mobile;		// 用户手机号
@@ -34,12 +34,12 @@ public class UserInfoResponse extends UserAbstractSuccessResponse{
 		this.nickname = nickname;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getMobile() {

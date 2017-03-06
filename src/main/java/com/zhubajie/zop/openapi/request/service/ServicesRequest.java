@@ -38,12 +38,12 @@ public class ServicesRequest extends UserAbstractRopRequest{
 	//服务内容
 	@NotBlank
 	@Rtf
-	@Length(min=1,max=4000)
+	@Length(min=1)
 	private String cont;
 	//app服务内容
 	@NotBlank
 	@Rtf
-	@Length(min=1,max=4000)
+	@Length(min=1)
 	private String contApp;
 	//三级基础类目(新)
 	@Min(value=0)

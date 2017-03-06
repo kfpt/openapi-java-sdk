@@ -1,6 +1,5 @@
 package com.zhubajie.zop.openapi.response.trade;
 
-import java.util.Date;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
